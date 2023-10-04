@@ -23,18 +23,26 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
-        working-directory: tf-files/main.tf
+        working-directory: tf-files/
+
+      - name: Terraform Format
+        run: terraform fmt
+        working-directory: tf-files/
 
       - name: Terraform Format
         run: terraform fmt -check
-        working-directory: tf-files/main.tf
+        working-directory: tf-files/
 
       - name: Terraform Validate
         id: validate
         run: terraform validate
-        working-directory: tf-files/main.tf
+        working-directory: tf-files/
 
       - name: Terraform Plan
         run: terraform plan
-        working-directory: tf-files/main.tf
+        working-directory: tf-files/
+
+      - name: Terraform Plan
+        run: terraform plan
+        working-directory: tf-files/
         continue-on-error: false
