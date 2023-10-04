@@ -36,5 +36,5 @@ jobs:
 
       - name: Terraform Plan
         run: terraform plan
-        working-directory: tf-files/main.tf
+        working-directory: tf-files/
         continue-on-error: false
