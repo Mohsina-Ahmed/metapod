@@ -23,11 +23,14 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
+        working-directory: tf-files/
       
       - name: Terraform Validate
         id: validate
         run: terraform validate
+        working-directory: tf-files/
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
+        working-directory: tf-files/
         continue-on-error: false
