@@ -24,7 +24,7 @@ jobs:
       - name: Terraform Init
         run: terraform init
         working-directory: tf-files/
-   
+        
       - name: Terraform Validate
         id: validate
         run: terraform validate
